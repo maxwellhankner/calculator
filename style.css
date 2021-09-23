@@ -47,8 +47,10 @@ body {
   margin-top: 35px;
   margin-left: 20px;
   margin-right: 20px;
+  font-size: 20px;
+  font-weight: bold;
   text-align: center;
-  color: #ffffff;
+  color: #7d7855;
 }
 
 #display {
@@ -56,16 +58,18 @@ body {
   height: 40px;
   margin-left: 20px;
   margin-right: 20px;
+  margin-top: 5px;
+  font-family: 'Segment7Standard';
   font-size: 35px;
   text-align: right;
   padding-right: 10px;
-  color: #ffffff;
+  color: #7d7855;
 }
 
 .buttons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-top: 32px;
+  margin-top: 27px;
 }
 
 .buttons:hover {

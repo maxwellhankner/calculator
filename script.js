@@ -13,7 +13,7 @@ buttons.map((button) => {
         if (calculated) {
           calculated = false;
         }
-        symbolElement.innerText = '+';
+        symbolElement.innerText = '\u002B';
         math += '+';
         display.innerText = '';
         break;
@@ -21,7 +21,7 @@ buttons.map((button) => {
         if (calculated) {
           calculated = false;
         }
-        symbolElement.innerText = '-';
+        symbolElement.innerText = '\u2212';
         math += '-';
         display.innerText = '';
         break;
@@ -29,7 +29,7 @@ buttons.map((button) => {
         if (calculated) {
           calculated = false;
         }
-        symbolElement.innerText = '*';
+        symbolElement.innerText = '\u00D7';
         math += '*';
         display.innerText = '';
         break;
@@ -37,7 +37,7 @@ buttons.map((button) => {
         if (calculated) {
           calculated = false;
         }
-        symbolElement.innerText = '/';
+        symbolElement.innerText = '\u00F7';
         math += '/';
         display.innerText = '';
         break;
