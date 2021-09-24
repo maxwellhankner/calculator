@@ -2,9 +2,11 @@
 let display = document.getElementById('display');
 
 let setDisplay = (string) => {
-  string = string.toLocaleString(undefined, {
-    maximumFractionDigits: 3,
-  });
+  string = string
+    .toLocaleString(undefined, {
+      maximumFractionDigits: 3,
+    })
+    .replace(/,/g, '');
   // change to exponent expressions
   if (string.length > 8) {
     display.innerText = 'too long';
@@ -21,7 +23,7 @@ let resetDisplay = () => {
 let getCurrentTime = () => {
   let now = new Date();
   let hour = now.getHours();
-  if (hour === 0) hour = 12;
+  hour === 0 && (hour = 12);
   hour = hour > 12 ? hour - 12 : hour;
   let minutes = now.getMinutes();
   let seconds = now.getSeconds();
