@@ -21,6 +21,7 @@ let resetDisplay = () => {
 let getCurrentTime = () => {
   let now = new Date();
   let hour = now.getHours();
+  if (hour === 0) hour = 12;
   hour = hour > 12 ? hour - 12 : hour;
   let minutes = now.getMinutes();
   let seconds = now.getSeconds();
