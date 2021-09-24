@@ -1,3 +1,3 @@
-# calculator
+# calculator-watch
 
-Simple calculator app
+Simple calculator-watch app
