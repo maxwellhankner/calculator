@@ -19,6 +19,7 @@ body {
 }
 
 .main-container {
+  /* background-color: #ffffff33; */
   position: relative;
   width: 100%;
   max-width: 400px;
@@ -26,7 +27,7 @@ body {
 }
 
 .height-container {
-  padding-bottom: 150%;
+  padding-bottom: 200%;
 }
 
 #graphic-container {
@@ -42,16 +43,18 @@ body {
 }
 
 .display-area {
+  /* background-color: #ff333333; */
   position: absolute;
-  margin-top: 40%;
-  margin-left: 22%;
-  width: 56%;
-  height: 43%;
+  margin-top: 56%;
+  margin-left: 15%;
+  width: 70%;
+  height: 42%;
 }
 
 #symbol {
-  height: 10%;
-  margin-top: 15%;
+  /* background-color: #ffff3333; */
+  height: 7%;
+  margin-top: 16%;
   margin-left: 10%;
   margin-right: 10%;
   font-size: 20px;
@@ -60,23 +63,31 @@ body {
   color: #7d7855;
 }
 
+#ampm {
+  /* background-color: #7722dd33; */
+  height: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 #display {
-  height: 15%;
+  /* background-color: #ff33ff33; */
+  height: 14%;
   margin-left: 10%;
   margin-right: 13%;
-  margin-top: 2%;
   font-family: 'alarm';
-  font-size: 35px;
+  font-size: 44px;
   text-align: right;
   color: #7d7855;
 }
 
 .buttons {
+  /* background-color: #ff33ff33; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-top: 14%;
+  margin-top: 12%;
   width: 100%;
-  height: 48%;
+  height: 46%;
 }
 
 .buttons:hover {
@@ -91,7 +102,7 @@ body {
 
 @media only screen and (max-width: 400px) {
   #display {
-    font-size: calc(8.8vw);
+    font-size: calc(11vw);
   }
   #symbol {
     font-size: calc(5vw);
