@@ -19,7 +19,6 @@ body {
 }
 
 .main-container {
-  /* background-color: #ffffff33; */
   position: relative;
   width: 100%;
   max-width: 400px;
@@ -43,7 +42,6 @@ body {
 }
 
 .display-area {
-  /* background-color: #ff333355; */
   position: absolute;
   margin-top: 40%;
   margin-left: 22%;
@@ -52,7 +50,6 @@ body {
 }
 
 #symbol {
-  /* background-color: #33ff3355; */
   height: 10%;
   margin-top: 15%;
   margin-left: 10%;
@@ -64,7 +61,6 @@ body {
 }
 
 #display {
-  /* background-color: #3333ff55; */
   height: 15%;
   margin-left: 10%;
   margin-right: 13%;
@@ -76,7 +72,6 @@ body {
 }
 
 .buttons {
-  /* background-color: #bbffbb33; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-top: 14%;
