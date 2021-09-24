@@ -2,9 +2,15 @@
 let display = document.getElementById('display');
 
 let setDisplay = (string) => {
-  display.innerText = string.toLocaleString(undefined, {
-    minimumFractionDigits: 2,
+  string = string.toLocaleString(undefined, {
+    maximumFractionDigits: 3,
   });
+  // change to exponent expressions
+  if (string.length > 8) {
+    display.innerText = 'too long';
+  } else {
+    display.innerText = string;
+  }
 };
 
 let resetDisplay = () => {
@@ -30,9 +36,9 @@ let getCurrentTime = () => {
 let watch;
 
 let updateTime = () => {
+  setDisplay(getCurrentTime());
   watch = setInterval(() => {
     setDisplay(getCurrentTime());
-    // updateTime();
   }, 1000);
 };
 
@@ -41,22 +47,24 @@ let stopTime = () => {
 };
 
 let buttonWait;
+let firstClick = true;
 
 let buttonTimeout = () => {
   stopTime();
-  resetDisplay();
+  if (firstClick) {
+    resetDisplay();
+    firstClick = false;
+  }
   clearTimeout(buttonWait);
   buttonWait = setTimeout(() => {
     resetCalculator();
     setSymbol();
+    firstClick = true;
     updateTime();
-  }, 6000);
+  }, 8000);
 };
 
 updateTime();
-
-// minimumIntegerDigits: 2,
-// minimumFractionDigits: 2
 
 // Calculator
 let symbolElement = document.getElementById('symbol');
@@ -129,10 +137,10 @@ buttons.map((button) => {
           math = '';
           setDisplay(math);
           math += e.target.id;
-          display.innerText += e.target.id;
+          setDisplay(display.innerText + e.target.id);
         } else {
           math += e.target.id;
-          display.innerText += e.target.id;
+          setDisplay(display.innerText + e.target.id);
         }
     }
   });

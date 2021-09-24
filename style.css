@@ -14,10 +14,15 @@ body {
 }
 
 .main-container {
+  /* background-color: #ffffff33; */
   position: relative;
-  width: 400px;
-  height: 600px;
+  width: 100%;
+  max-width: 400px;
   margin: auto;
+}
+
+.height-container {
+  padding-bottom: 150%;
 }
 
 #graphic-container {
@@ -33,20 +38,20 @@ body {
 }
 
 .display-area {
-  /* background-color: #ff333333; */
+  /* background-color: #ff333355; */
   position: absolute;
-  margin-top: 160px;
-  margin-left: 87px;
-  width: 224px;
-  height: 260px;
+  margin-top: 40%;
+  margin-left: 22%;
+  width: 56%;
+  height: 43%;
 }
 
 #symbol {
-  /* background-color: #33ff3333; */
-  height: 25px;
-  margin-top: 35px;
-  margin-left: 20px;
-  margin-right: 20px;
+  /* background-color: #33ff3355; */
+  height: 10%;
+  margin-top: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
@@ -54,22 +59,24 @@ body {
 }
 
 #display {
-  /* background-color: #3333ff33; */
-  height: 40px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 5px;
+  /* background-color: #3333ff55; */
+  height: 15%;
+  margin-left: 10%;
+  margin-right: 13%;
+  margin-top: 2%;
   font-family: 'Segment7Standard';
   font-size: 35px;
   text-align: right;
-  padding-right: 10px;
   color: #7d7855;
 }
 
 .buttons {
+  /* background-color: #bbffbb33; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-top: 27px;
+  margin-top: 14%;
+  width: 100%;
+  height: 48%;
 }
 
 .buttons:hover {
@@ -77,6 +84,16 @@ body {
 }
 
 .button {
-  height: 30px;
+  width: 100%;
+  height: 100%;
   text-align: center;
+}
+
+@media only screen and (max-width: 400px) {
+  #display {
+    font-size: calc(8.8vw);
+  }
+  #symbol {
+    font-size: calc(5vw);
+  }
 }
