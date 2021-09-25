@@ -112,6 +112,9 @@ body {
     background-color: #bbddbb;
   }
   .main-container {
+    width: 100%;
+  }
+  .main-container {
     position: relative;
     height: 100vh;
     width: 54.3vh;
