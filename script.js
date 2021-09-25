@@ -2,20 +2,19 @@
 let display = document.getElementById('display');
 let meridiemElement = document.getElementById('meridiem');
 
-let setDisplay = (string, time) => {
+let setDisplay = (string, meridiem) => {
   string = string
     .toLocaleString(undefined, {
       maximumFractionDigits: 3,
     })
     .replace(/,/g, '');
-  // change to exponent expressions
   if (string.length > 8) {
     display.innerText = 'too long';
   } else {
     display.innerText = string;
   }
-  if (time) {
-    meridiemElement.innerText = time;
+  if (meridiem) {
+    meridiemElement.innerText = meridiem;
   } else {
     meridiemElement.innerText = '';
   }
