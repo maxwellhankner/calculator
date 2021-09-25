@@ -27,7 +27,7 @@ body {
 }
 
 .height-container {
-  padding-bottom: 200%;
+  padding-bottom: 184%;
 }
 
 #graphic-container {
@@ -45,10 +45,10 @@ body {
 .display-area {
   /* background-color: #ff333333; */
   position: absolute;
-  margin-top: 56%;
+  margin-top: 48%;
   margin-left: 15%;
   width: 70%;
-  height: 42%;
+  height: 45%;
 }
 
 #symbol {
