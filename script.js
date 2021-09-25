@@ -52,7 +52,6 @@ let watch;
 
 let updateTime = () => {
   let { time, meridiem } = getCurrentTime();
-  console.log(time, meridiem);
   setDisplay(time, meridiem);
   watch = setInterval(() => {
     let { time, meridiem } = getCurrentTime();
@@ -88,11 +87,15 @@ updateTime();
 let symbolElement = document.getElementById('symbol');
 
 let symbol = '';
+let savedSymbol = '';
+let savedNumber = '';
 let math = '';
 let calculated = false;
 
 let resetCalculator = () => {
   symbol = '';
+  savedSymbol = '';
+  savedNumber = '';
   math = '';
   calculated = false;
 };
@@ -111,6 +114,9 @@ buttons.map((button) => {
           calculated = false;
         }
         setSymbol('\u002B');
+        symbol = '+';
+        savedSymbol = '';
+        savedNumber = '';
         math += '+';
         resetDisplay();
         break;
@@ -119,6 +125,9 @@ buttons.map((button) => {
           calculated = false;
         }
         setSymbol('\u2212');
+        symbol = '-';
+        savedSymbol = '';
+        savedNumber = '';
         math += '-';
         resetDisplay();
         break;
@@ -127,6 +136,9 @@ buttons.map((button) => {
           calculated = false;
         }
         setSymbol('\u00D7');
+        symbol = '*';
+        savedSymbol = '';
+        savedNumber = '';
         math += '*';
         resetDisplay();
         break;
@@ -135,24 +147,43 @@ buttons.map((button) => {
           calculated = false;
         }
         setSymbol('\u00F7');
+        symbol = '/';
+        savedSymbol = '';
+        savedNumber = '';
         math += '/';
         resetDisplay();
         break;
       case 'equal':
-        setSymbol('');
-        calculated = true;
-        try {
-          let evaluation = eval(math);
-          setDisplay(evaluation);
-          math = evaluation;
-        } catch {
-          setDisplay('Error');
+        if (savedSymbol) {
+          math += savedSymbol;
+          math += savedNumber;
+          try {
+            let evaluation = eval(math);
+            setDisplay(evaluation);
+            math = evaluation;
+          } catch {
+            setDisplay('Error');
+          }
+        } else {
+          savedSymbol = symbol;
+          savedNumber = display.innerText;
+          symbol = '';
+          setSymbol('');
+          calculated = true;
+          try {
+            let evaluation = eval(math);
+            setDisplay(evaluation);
+            math = evaluation;
+          } catch {
+            setDisplay('Error');
+          }
         }
         break;
       default:
         if (calculated) {
           calculated = false;
           math = '';
+          savedSymbol = '';
           setDisplay(math);
           math += e.target.id;
           setDisplay(display.innerText + e.target.id);
