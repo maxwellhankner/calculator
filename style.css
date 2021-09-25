@@ -2,6 +2,7 @@
   font-family: alarm;
   src: url('fonts/Segment7Standard.otf');
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 html,
 body {
@@ -70,7 +71,7 @@ body {
   margin-left: 14%;
   margin-right: 10%;
   color: #7d7855;
-  font-family: 'roboto';
+  font-family: 'Roboto';
   font-size: 12px;
 }
 
