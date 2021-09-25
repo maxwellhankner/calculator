@@ -55,6 +55,7 @@ let updateTime = () => {
   console.log(time, meridiem);
   setDisplay(time, meridiem);
   watch = setInterval(() => {
+    let { time, meridiem } = getCurrentTime();
     setDisplay(time, meridiem);
   }, 1000);
 };
