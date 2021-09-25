@@ -64,11 +64,14 @@ body {
   color: #7d7855;
 }
 
-#ampm {
+#meridiem {
   /* background-color: #7722dd33; */
   height: 5%;
-  margin-left: 10%;
+  margin-left: 14%;
   margin-right: 10%;
+  color: #7d7855;
+  font-family: 'roboto';
+  font-size: 12px;
 }
 
 #display {

@@ -1,7 +1,8 @@
 // Display
 let display = document.getElementById('display');
+let meridiemElement = document.getElementById('meridiem');
 
-let setDisplay = (string) => {
+let setDisplay = (string, time) => {
   string = string
     .toLocaleString(undefined, {
       maximumFractionDigits: 3,
@@ -13,6 +14,11 @@ let setDisplay = (string) => {
   } else {
     display.innerText = string;
   }
+  if (time) {
+    meridiemElement.innerText = time;
+  } else {
+    meridiemElement.innerText = '';
+  }
 };
 
 let resetDisplay = () => {
@@ -23,25 +29,33 @@ let resetDisplay = () => {
 let getCurrentTime = () => {
   let now = new Date();
   let hour = now.getHours();
+
+  let meridiem = 'AM';
+  hour > 11 && (meridiem = 'PM');
+
   hour === 0 && (hour = 12);
   hour = hour > 12 ? hour - 12 : hour;
   let minutes = now.getMinutes();
   let seconds = now.getSeconds();
-  return (
-    hour +
-    ' ' +
-    minutes.toLocaleString(undefined, { minimumIntegerDigits: 2 }) +
-    ' ' +
-    seconds.toLocaleString(undefined, { minimumIntegerDigits: 2 })
-  );
+  return {
+    time:
+      hour +
+      ' ' +
+      minutes.toLocaleString(undefined, { minimumIntegerDigits: 2 }) +
+      ' ' +
+      seconds.toLocaleString(undefined, { minimumIntegerDigits: 2 }),
+    meridiem,
+  };
 };
 
 let watch;
 
 let updateTime = () => {
-  setDisplay(getCurrentTime());
+  let { time, meridiem } = getCurrentTime();
+  console.log(time, meridiem);
+  setDisplay(time, meridiem);
   watch = setInterval(() => {
-    setDisplay(getCurrentTime());
+    setDisplay(time, meridiem);
   }, 1000);
 };
 
