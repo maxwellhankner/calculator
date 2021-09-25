@@ -116,4 +116,7 @@ body {
   #symbol {
     font-size: calc(4.5vw);
   }
+  #meridiem {
+    font-size: calc(2.7vw);
+  }
 }
