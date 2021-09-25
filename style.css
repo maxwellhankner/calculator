@@ -60,6 +60,7 @@ body {
   margin-left: 10%;
   margin-right: 10%;
   font-size: 20px;
+  font-family: 'Roboto', 'Arial';
   font-weight: bold;
   text-align: center;
   color: #7d7855;
@@ -71,7 +72,9 @@ body {
   margin-left: 14%;
   margin-right: 10%;
   color: #7d7855;
-  font-family: 'Roboto';
+  font-family: 'Roboto', 'Arial';
+  font-weight: bold;
+
   font-size: 12px;
 }
 
