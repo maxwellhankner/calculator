@@ -9,7 +9,8 @@ body {
   height: 100%;
   margin: 0px;
   padding: 0px;
-  background-color: #bbddbb;
+  /* background-color: #bbddbb; */
+  background-color: #000000;
 }
 
 body {
@@ -100,11 +101,16 @@ body {
   text-align: center;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 440px) {
+  body {
+    width: unset;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
   #display {
-    font-size: calc(11vw);
+    font-size: calc(10vw);
   }
   #symbol {
-    font-size: calc(5vw);
+    font-size: calc(4.5vw);
   }
 }
