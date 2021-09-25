@@ -108,6 +108,9 @@ body {
 
 /* Wide */
 @media (min-aspect-ratio: 100/184) {
+  body {
+    background-color: #bbddbb;
+  }
   .main-container {
     position: relative;
     height: 100vh;
