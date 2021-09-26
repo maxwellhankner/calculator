@@ -1,7 +1,4 @@
 // Body
-document.body.addEventListener('touchmove scroll pinch', function (e) {
-  e.preventDefault();
-});
 document.body.style.height = window.innerHeight + 'px';
 window.addEventListener('resize', () => {
   document.body.style.height = window.innerHeight + 'px';
