@@ -12,6 +12,8 @@ body {
   padding: 0px;
   /* background-color: #bbddbb; */
   background-color: #000000;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .main-container {
