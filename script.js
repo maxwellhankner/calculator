@@ -1,3 +1,9 @@
+// Body height
+document.body.style.height = window.innerHeight + 'px';
+window.addEventListener('resize', () => {
+  document.body.style.height = window.innerHeight + 'px';
+});
+
 // Display
 let display = document.getElementById('display');
 let meridiemElement = document.getElementById('meridiem');
