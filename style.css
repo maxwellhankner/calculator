@@ -8,25 +8,26 @@ html,
 body {
   margin: 0px;
   padding: 0px;
-  /* background-color: #bbddbb; */
   background-color: #000000;
   overflow-x: hidden;
 }
 
 body {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-container {
-  /* background-color: #ffffff33; */
   position: relative;
-  height: 100vh;
-  width: 54.3vh;
+  height: 80vh;
+  width: 43.7vh;
   margin: auto;
 }
 
 .height-container {
-  padding-bottom: 184%;
+  padding-bottom: 183%;
 }
 
 #graphic-container {
@@ -41,7 +42,6 @@ body {
 }
 
 .display-area {
-  /* background-color: #ff333333; */
   position: absolute;
   margin-top: 48%;
   margin-left: 15%;
@@ -50,12 +50,11 @@ body {
 }
 
 #symbol {
-  /* background-color: #ffff3333; */
   height: 7%;
   margin-top: 16%;
   margin-left: 10%;
   margin-right: 10%;
-  font-size: calc(3vh);
+  font-size: calc(2.5vh);
   font-family: 'Roboto', 'Arial';
   font-weight: bold;
   text-align: center;
@@ -63,29 +62,26 @@ body {
 }
 
 #meridiem {
-  /* background-color: #7722dd33; */
   height: 5%;
   margin-left: 14%;
   margin-right: 10%;
   color: #7d7855;
+  font-size: calc(1.3vh);
   font-family: 'Roboto', 'Arial';
   font-weight: bold;
-  font-size: calc(1.7vh);
 }
 
 #display {
-  /* background-color: #ff33ff33; */
   height: 14%;
   margin-left: 10%;
   margin-right: 13%;
-  font-family: 'alarm';
-  font-size: calc(6vh);
-  text-align: right;
   color: #7d7855;
+  font-size: calc(4.8vh);
+  font-family: 'alarm';
+  text-align: right;
 }
 
 .buttons {
-  /* background-color: #ff33ff33; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-top: 12%;
@@ -105,11 +101,6 @@ body {
 
 /* Mobile */
 @media screen and (max-width: 700px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   .main-container {
     width: 80%;
     margin-left: 10%;

@@ -110,6 +110,7 @@ let setSymbol = (char = '') => {
   symbolElement.innerText = char;
 };
 
+// Buttons
 let buttons = Array.from(document.getElementsByClassName('button'));
 buttons.map((button) => {
   button.addEventListener('click', (e) => {
